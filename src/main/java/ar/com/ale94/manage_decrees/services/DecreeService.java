@@ -40,12 +40,12 @@ public class DecreeService implements IDecreeService {
 
     @Override
     public List<DecreeEntity> getAll() {
-        return List.of();
+        return this.decreeRepository.findAll();
     }
 
     @Override
     public DecreeEntity getByNumber(String number) {
-        return null;
+        return this.decreeRepository.findByDecreeNumber(number).orElseThrow();
     }
 
     @Override
