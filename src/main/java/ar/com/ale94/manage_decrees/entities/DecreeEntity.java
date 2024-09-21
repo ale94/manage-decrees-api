@@ -15,7 +15,6 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Builder
 public class DecreeEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
