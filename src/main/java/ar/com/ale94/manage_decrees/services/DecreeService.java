@@ -54,7 +54,8 @@ public class DecreeService implements IDecreeService {
     }
 
     @Override
-    public void delete() {
-
+    public void delete(String number) {
+        var decreeToDelete = this.decreeRepository.findByDecreeNumber(number).orElseThrow();
+        this.decreeRepository.delete(decreeToDelete);
     }
 }

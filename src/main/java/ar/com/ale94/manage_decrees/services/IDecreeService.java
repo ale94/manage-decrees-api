@@ -15,5 +15,5 @@ public interface IDecreeService {
 
     DecreeEntity update(String number, DecreeDTO dto);
 
-    void delete();
+    void delete(String number);
 }
